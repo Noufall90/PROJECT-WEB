@@ -1,0 +1,24 @@
+head{
+    font-family: "cooper black","press start 2p",sans-serif;
+    font-size: 50px;
+    font-style: normal;
+
+}
+body{
+    font-family: "consolas", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+h2{
+    font-family:"press start 2p",sans-serif ;
+    font-size: larger;
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text {
+    max-width: 1000px;
+    margin-right: auto;
+    text-align: justify;
+  }
