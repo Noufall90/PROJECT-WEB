@@ -1,0 +1,274 @@
+
+@font-face {
+  font-family: "BRITANIC";
+  src: url("path/to/BRITANIC.ttf") format("truetype");
+}
+
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+body {
+  background: linear-gradient(45deg, #ff6bbf, #E0FF58, #00AEFF, #54FF87);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+  cursor: url(./gambar/icons8-select-cursor-16.png),auto;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  height: 650px;
+  width: 500px;
+  top: 50px;
+  display: flex;
+  margin: 0% auto;
+  position: relative;
+  justify-self: center;
+  -ms-flex-align: center;
+  background: linear-gradient(50deg,#c4ffea,#8feaff,#6696ff,#5154ff,#a743ff);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  left: 160px;
+  bottom: -200px;
+  width: 200px;
+  height: 170%;
+  background: linear-gradient(#ff0000, #0400ff);
+  animation: rotate 4s linear infinite;
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(60deg, #457dff, #ff0ade, #ff3b3e, #48ff7f);
+  background-size: 150% 100%;
+  border-radius: 15px;
+  inset: 10px;
+  animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tabp {
+  position: relative;
+  left: 260px;
+  bottom: -500px;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  rotate: 90deg;
+}
+
+.tab-container {
+  position: absolute;
+  top: 0px;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap:unset;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tab {
+  width: 120px;
+  height: 30px;
+  border-radius: 5%;
+  background: linear-gradient(-5deg, #ffed27, #ff6d6d);
+  margin: 10px;
+  box-shadow: 0 5px 15px 5px rgba(20, 20, 20, 0);
+  overflow: hidden;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: rgb(23, 23, 23);
+  text-decoration: none;
+  transition-duration: 0.1s;
+  transition-property: box-shadow, transform;
+}
+
+.tab:hover,
+.tab:focus,
+.tab:active {
+  box-shadow: 0 0 2px #ffffff;
+  transform: scale(1.1);
+}
+
+
+
+.box{
+  position: absolute;
+  top: 0%;
+  left: 15%;
+  height:300px; 
+  width:200px;
+  border-radius: 10%;
+}
+
+.img1 {
+  position: absolute;
+  top: 10%;
+  left: 43%;
+  height: 300px;
+  width: 200px;
+  border-radius: 10%;
+  
+  z-index: 2;
+  overflow: hidden;
+  transform-origin: 50% 50%;
+  transition: 0.4s;
+}
+.img2 {
+  filter: blur(30px);
+  transform: scale(1.1);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  position: absolute;
+  top: 10%;
+  left: 43%;
+  height: 290px;
+  width: 190px;
+  border-radius: 10%;
+}
+
+.box:hover .img1 {
+  filter: blur(30px);
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+.box:hover .img2 {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
+h1 {
+  font-family: "BRITANNIC", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  z-index: 5;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  background: repeating-radial-gradient(#1100ab,#171717);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center;
+  transform: scaleX(0);
+}
+h1:hover::after {
+  transform: scaleX(1);
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:500;
+  position: relative;
+  top: 56%;
+  left: 20%;
+  z-index: 4;
+}
+
+ul {
+  position: absolute;
+  top: 63%;
+  left: 5%;
+  width: 450px;
+  height: 300px;
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: bold;
+  z-index: 3;
+  list-style-type: "⨂ ";
+}
+
+
+
+p {
+  position: absolute;
+  top: 63%;
+  left: 5%;
+  width: 450px;
+  height: 300px;
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style:normal;
+  font-weight: bold;
+  z-index: 3;
+}
+
+.icon {
+  position: absolute;
+  top:92%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 6;
+}
+
+.tombol {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg, #c352ff, #42c3ff, #45e0ff, #20ff63);
+  margin: 10px ;
+  border-radius: 20%;
+  box-shadow: 0 5px 15px 5px rgba(20, 20, 20, 0);
+  overflow: hidden;
+  position: relative;
+  color: rgb(23, 23, 23);
+  transition-duration:0.2s ;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property:box-shadow, transform ;
+}
+.tombol i {
+  transition: 0.2s linear;
+  font-size: 30px;
+  line-height: 70px;
+}
+.tombol:hover, .tombol:focus, .tombol:active{
+  box-shadow: 0 0 2px #000000;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+
